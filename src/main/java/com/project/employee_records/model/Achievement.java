@@ -18,15 +18,15 @@ import java.time.LocalDateTime;
 public class Achievement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idAchiev;
+    private Integer idAchiev;
     @NonNull
     private String achievName;
     @NonNull
     private String achievDesc;
     @NonNull
     private Integer achievValueScore;
-    @CreationTimestamp
     @NonNull
+    @CreationTimestamp
     private LocalDateTime achievStartDate;
     @NonNull
     private LocalDate achievEndDate;

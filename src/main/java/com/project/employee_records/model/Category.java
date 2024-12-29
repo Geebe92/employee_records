@@ -14,7 +14,7 @@ import org.springframework.lang.NonNull;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idCat;
+    private Integer idCat;
     @NonNull
     private String name;
     @NonNull
