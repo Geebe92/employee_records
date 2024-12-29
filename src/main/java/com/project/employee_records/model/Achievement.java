@@ -6,6 +6,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -13,5 +18,16 @@ import lombok.NoArgsConstructor;
 public class Achievement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int achievId;
+    private int idAchiev;
+    @NonNull
+    private String achievName;
+    @NonNull
+    private String achievDesc;
+    @NonNull
+    private Integer achievValueScore;
+    @CreationTimestamp
+    @NonNull
+    private LocalDateTime achievStartDate;
+    @NonNull
+    private LocalDate achievEndDate;
 }

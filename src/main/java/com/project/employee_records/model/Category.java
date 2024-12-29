@@ -16,7 +16,7 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCat;
     @NonNull
-    private String nameCat;
+    private String name;
     @NonNull
-    private String descCat;
+    private String desc;
 }

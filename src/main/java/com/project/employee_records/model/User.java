@@ -1,6 +1,7 @@
 package com.project.employee_records.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ public class User {
     @NonNull
     private String email;
     @NonNull
+    @JsonIgnoreProperties
     private String password;
     @NonNull
     private String phoneNumber;
@@ -29,5 +31,6 @@ public class User {
     private String zipcode;
     @NonNull
     private String city;
+    @NonNull
     private Role role;
 }
