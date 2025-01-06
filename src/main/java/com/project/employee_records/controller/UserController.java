@@ -54,7 +54,7 @@ public class UserController {
     @DeleteMapping("/records/{idUser}")
     public ResponseEntity<Void> deleteUser(@PathVariable Integer idUser){
         return userService.getUser(idUser)
-                .map(u -> {W
+                .map(u -> {
                     userService.deleteUser(idUser);
                     return new ResponseEntity<Void>(HttpStatus.OK);
                 })

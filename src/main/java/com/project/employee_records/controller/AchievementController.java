@@ -55,7 +55,7 @@ public class AchievementController {
     public ResponseEntity<Void> deleteAchievement(@PathVariable Integer idAchiev){
         return achievementService.getAchievement(idAchiev)
                 .map(a -> {
-                    achievementService.deleteAchieviement(idAchiev);
+                    achievementService.deleteAchievement(idAchiev);
                     return new ResponseEntity<Void>(HttpStatus.OK);
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
